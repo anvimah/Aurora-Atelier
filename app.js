@@ -58,12 +58,12 @@
     // Armband
     {
       id: 'B-NORTH',
-      name: 'North Cuff',
+      name: 'North Star Bracelet',
       category: 'Armband',
       price: 1790,
       tones: ['silver'],
       images: {
-        silver: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop'
+        silver: 'https://www.smycka.se/pub_images/original/A2156-051-14-1400x1400.jpg'
       },
       description: 'Styvt cuff-armband med mjukt rundade ändar.',
       material: '925 sterlingsilver',
