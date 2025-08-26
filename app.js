@@ -78,7 +78,7 @@
       createdAt: '2025-07-30'
     },
     {
-      id: 'B-SILH',
+      id: 'B-RETRO',
       name: 'Retrograde Bracelet',
       category: 'Armband',
       price: 1290,
@@ -102,16 +102,16 @@
 
     // Ringar
     {
-      id: 'R-LINEA',
-      name: 'Linea Ring',
+      id: 'R-NEPTUNUS',
+      name: 'Neptunus Ring',
       category: 'Ringar',
       price: 1190,
       tones: ['silver', 'gold'],
       images: {
-        silver: 'https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop',
-        gold: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce346?q=80&w=1200&auto=format&fit=crop'
+        silver: 'https://www.nordicspectra.se/wp-content/uploads/2022/02/20001076_MERCY_RING_mini.jpg',
+        gold: 'https://www.nordicspectra.se/wp-content/uploads/2021/09/20000013-mercy-ring-mini.jpg'
       },
-      description: 'Ren ring med subtil mittlinje – vacker solo eller staplad.',
+      description: 'Ring med nätt och rundad skena – vacker solo eller staplad.',
       material: '925 sterlingsilver / 18K guldplätering',
       dimensions: 'Bredd 2.5 mm',
       weight: '4 g (stl 54)',
@@ -125,15 +125,15 @@
       createdAt: '2025-08-10'
     },
     {
-      id: 'R-SIGN',
-      name: 'Bold Signet',
+      id: 'R-JUPITER',
+      name: 'Jupiter Ring',
       category: 'Ringar',
       price: 1690,
       tones: ['silver'],
       images: {
-        silver: 'https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop'
+        silver: 'https://safira.imgix.net/3947_605a598cec-1500681-11.jpg?auto=format&fit=crop&w=1152&h=1536&q=50'
       },
-      description: 'Klassisk signetring – kan graveras.',
+      description: 'Klassisk silverring – kan graveras.',
       material: '925 sterlingsilver',
       dimensions: 'Topp 12 × 10 mm',
       weight: '9 g (stl 56)',
