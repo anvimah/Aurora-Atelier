@@ -33,7 +33,7 @@
     },
     {
       id: 'N-LUNA',
-      name: 'Luna Bar Necklace',
+      name: 'Luna Necklace',
       category: 'Halsband',
       price: 1690,
       tones: ['silver'],
