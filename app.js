@@ -15,7 +15,7 @@
       price: 1490,
       tones: ['silver', 'gold'],
       images: {
-        silver: 'https://images.unsplash.com/photo-1520975922284-ec97aadb9e8f?q=80&w=1200&auto=format&fit=crop',
+        silver: 'https://designtorget.se/image/14222/dearsilverhalsband1.jpg',
         gold: 'https://designtorget.se/image/14231/dearguldhalsband1.jpg'
       },
       description: 'Minimalistiskt halsband med mjukt fasetterad medaljong.',
