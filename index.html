@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+</form>
+<p class="f-muted f-small">Genom att anmäla dig godkänner du vår <a href="#">integritetspolicy</a>.</p>
+</section>
+
+
+<footer class="site-footer" id="contact">
+<div class="f-cols">
+<div>
+<div class="f-logo">Aurora Atelier</div>
+<p class="f-muted">Stockholm • Est. 2025</p>
+<p class="f-small f-muted">Org.nr 556000-0000</p>
+</div>
+<div>
+<h3>Kundservice</h3>
+<ul>
+<li><a href="#">Frakt & returer</a></li>
+<li><a href="#">Storleksguide</a></li>
 <li><a href="#">Garanti</a></li>
 <li><a href="#">Köpvillkor</a></li>
 </ul>
@@ -12,48 +29,28 @@
 </ul>
 </div>
 </div>
-<div class="pay-row">
-<span class="f-muted">Säker betalning:</span>
-<div class="pay-icons" aria-hidden="true">VISA · Mastercard · Klarna · Swish (demo)</div>
-</div>
+<div class="pay-row"><span class="f-muted">Säker betalning:</span><div class="pay-icons" aria-hidden="true">VISA · Mastercard · Klarna · Swish (demo)</div></div>
 <p class="f-copy">© <span id="year"></span> Aurora Atelier. Alla rättigheter förbehållna.</p>
 </footer>
 
 
-<!-- Cart Drawer -->
 <aside class="cart" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
 <div class="cart-panel" role="document">
 <div class="cart-head">
 <h2 id="cartTitle">Varukorg</h2>
-<button class="icon-btn" id="closeCart" aria-label="Stäng varukorg">
-<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-</button>
+<button class="icon-btn" id="closeCart" aria-label="Stäng varukorg">✖</button>
 </div>
-
-
-<!-- Rabattkod + frakt -->
 <div class="cart-tools">
 <div class="tool">
 <label for="discountInput">Rabattkod</label>
-<div class="tool-row">
-<input id="discountInput" type="text" placeholder="Ange kod (t.ex. AURORA10)"/>
-<button id="applyDiscount" class="btn">Använd</button>
-</div>
+<div class="tool-row"><input id="discountInput" type="text" placeholder="Ange kod (t.ex. AURORA10)"/><button id="applyDiscount" class="btn">Använd</button></div>
 <p class="f-small f-muted">AURORA10 ger 10% rabatt (demo).</p>
 </div>
 <div class="tool">
 <label for="shippingSelect">Leverans</label>
-<div class="tool-row">
-<select id="shippingSelect">
-<option value="SE">Sverige – 49 kr (fri frakt över 600 kr)</option>
-<option value="EU">EU – 99 kr</option>
-<option value="World">Övriga världen – 149 kr</option>
-</select>
+<div class="tool-row"><select id="shippingSelect"><option value="SE">Sverige – 49 kr (fri frakt över 600 kr)</option><option value="EU">EU – 99 kr</option><option value="World">Övriga världen – 149 kr</option></select></div>
 </div>
 </div>
-</div>
-
-
 <div id="cartItems" class="cart-items" aria-live="polite"></div>
 <div class="cart-foot">
 <div class="cart-row"><span>Delsumma</span><strong id="cartSubtotal">0 kr</strong></div>
