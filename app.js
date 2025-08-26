@@ -79,13 +79,13 @@
     },
     {
       id: 'B-SILH',
-      name: 'Silhouette Chain',
+      name: 'Retrograde Bracelet',
       category: 'Armband',
       price: 1290,
       tones: ['silver', 'gold'],
       images: {
-        silver: 'https://images.unsplash.com/photo-1677590740478-e286e07b97ab?q=80&w=1200&auto=format&fit=crop',
-        gold: 'https://images.unsplash.com/photo-1591798454438-a3c3a5c89c3b?q=80&w=1200&auto=format&fit=crop'
+        silver: 'https://safira.imgix.net/1624_2f937feb95-1200210-11.jpg?auto=format&fit=crop&w=1152&h=1536&q=50',
+        gold: 'https://a.storyblok.com/f/110089/1500x2000/8790353de1/chunky-armband-valv.jpg/m/750x1000/filters:quality(50)'
       },
       description: 'Finstämd kedja med ovala länkar – vardagsfin eller lager på lager.',
       material: 'Mässing 18K guldplätering / 925 silver',
