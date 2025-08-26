@@ -38,7 +38,7 @@
       price: 1690,
       tones: ['silver'],
       images: {
-        silver: 'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop',
+        silver: 'https://lelika.se/wp-content/uploads/2024/08/6-8-scaled.webp',
         gold: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce346?q=80&w=1200&auto=format&fit=crop'
       },
       description: 'Klassiskt silverhalsband med berlock.',
