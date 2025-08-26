@@ -1,6 +1,4 @@
 /* Aurora Atelier — stil: monokrom, luft, fokus på typografi (Drakenberg Sjölin-inspirerat) */
-.swatches { display: flex; gap: 8px; }
-.swatch { width: 22px; height: 22px; border-radius: 999px; border: 1px solid var(--line); cursor: pointer; position: relative; }
 .swatch[data-tone="silver"] { background: linear-gradient(145deg, #f2f2f2, #cfd2d6); }
 .swatch[data-tone="gold"] { background: linear-gradient(145deg, #ffe8a3, #d6b85d); }
 .swatch.is-active::after { content: ""; position: absolute; inset: -4px; border: 2px solid #111; border-radius: 999px; }
