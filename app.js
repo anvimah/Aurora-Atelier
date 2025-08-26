@@ -10,7 +10,7 @@
     // Halsband
     {
       id: 'N-AURA',
-      name: 'Aura Pendant',
+      name: 'Aura Necklace',
       category: 'Halsband',
       price: 1490,
       tones: ['silver', 'gold'],
@@ -41,7 +41,7 @@
         silver: 'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop',
         gold: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce346?q=80&w=1200&auto=format&fit=crop'
       },
-      description: 'Grafisk bar i silver – stark men subtil.',
+      description: 'Klassiskt silverhalsband med berlock.',
       material: '925 sterlingsilver',
       dimensions: 'Bar 28 × 3 mm',
       chainLength: '42 cm',
