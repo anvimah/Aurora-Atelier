@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aurora Atelier – Smycken med mening</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Scripts -->
+    <script defer src="app.js"></script>
+
+    <!-- Minimal inline-stil så sidan syns även om styles.css inte laddas -->
+    <style>
+      body{margin:0;font-family:Inter,system-ui,sans-serif;color:#111}
+      .announce{text-align:center;padding:8px 12px;color:#6b7280;border-bottom:1px solid #e5e7eb}
+      header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #e5e7eb;position:sticky;top:0;background:#fff}
+      .logo{font-family:"Cormorant Garamond",serif;font-weight:600;text-decoration:none;color:inherit;font-size:24px}
+      .hero{min-height:50vh;display:grid;place-items:center;text-align:center;background:url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce346?q=80&w=1920&auto=format&fit=crop") center/cover}
+      .hero h1{font-family:"Cormorant Garamond",serif;font-size:40px;margin:0 0 8px}
+      .section{padding:28px 16px;max-width:1100px;margin:0 auto}
+      footer{border-top:1px solid #e5e7eb;padding:24px 16px}
+    </style>
+  </head>
+  <body>
+    <!-- Announce -->
+    <div class="announce">Fri frakt över 600 kr • 30 dagar öppet köp • Handgjort i Norden</div>
+
+    <!-- Header/Nav -->
+    <header class="site-header">
+      <a class="logo" href="#" aria-label="Aurora Atelier startsida">Aurora Atelier</a>
+      <nav class="nav" aria-label="Huvudmeny">
+        <a href="#shop" style="margin-right:12px; text-decoration:none; color:inherit">Shop</a>
+        <a href="#story" style="text-decoration:none; color:inherit">Vår berättelse</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" aria-label="Sök" id="openSearch" title="Sök">🔎</button>
+        <button class="icon-btn cart-btn" aria-label="Varukorg" id="openCart">🛒 <span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </header>
+
+    <!-- Sökfält (gömt vid start) -->
+    <div class="searchbar" id="searchbar" hidden>
+      <input id="searchInput" type="search" placeholder="Sök smycken, t.ex. 'silverring'" aria-label="Sök"/>
+      <button id="closeSearch" class="icon-btn" aria-label="Stäng sök">✖</button>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Hjältsektion">
+      <div>
+        <h1>Tidlös nordisk elegans</h1>
+        <p>Skulpterade former, rena linjer – smycken med mening.</p>
+        <a href="#shop" style="display:inline-block;padding:10px 16px;border:1px solid #111;border-radius:999px;color:#fff;background:#111;text-decoration:none">Handla kollektionen</a>
+      </div>
+    </section>
+
+    <!-- Shop (tom, fylls av JS) -->
+    <section id="shop" class="section" aria-labelledby="shopTitle">
+      <h2 id="shopTitle" style="font-family:'Cormorant Garamond',serif; font-size:28px; margin:0 0 12px">Kollektion</h2>
+      <div id="productGrid" class="product-grid" aria-live="polite">
+        <!-- JS renderar produkter här -->
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="section" style="background:#fafafa; border-block:1px solid #e5e7eb;">
+      <h2 style="font-family:'Cormorant Garamond',serif; margin:0 0 8px; font-size:28px">Design med mening</h2>
+      <p style="max-width:70ch; color:#6b7280">
+        Varje smycke formas med precision och eftertanke – inspirerat av skandinavisk minimalism.
+      </p>
+      <a href="#shop" style="display:inline-block;padding:10px 16px;border:1px solid #111;border-radius:999px;text-decoration:none;color:#111">Se bästsäljare</a>
+    </section>
+
+    <!-- Newsletter (DIN bit som saknade öppningar) -->
+    <section class="newsletter section" aria-labelledby="nlTitle">
+      <h2 id="nlTitle" style="font-family:'Cormorant Garamond',serif; font-size:28px; margin:0 0 12px">Få nyheter först</h2>
+      <form class="nl-form" onsubmit="event.preventDefault(); alert('Tack! Du är nu med på listan.');">
+        <input type="email" placeholder="Din e-post" aria-label="E-post" required />
+        <button class="btn btn-primary" type="submit">Prenumerera</button>
+      </form>
+    </section>
+
+    <!-- Footer (DIN bit, oförändrad förutom att årtal fylls av JS) -->
+    <footer class="site-footer" id="contact">
+      <div class="f-cols">
+        <div>
+          <div class="f-logo">Aurora Atelier</div>
+          <p class="f-muted">Stockholm • Est. 2025</p>
+        </div>
+        <div>
+          <h3>Kundservice</h3>
+          <ul>
+            <li><a href="#">Frakt & returer</a></li>
+            <li><a href="#">Storleksguide</a></li>
+            <li><a href="#">Garanti</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Följ oss</h3>
+          <ul class="socials">
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="Pinterest">Pinterest</a></li>
+            <li><a href="#" aria-label="TikTok">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="f-copy">© <span id="year"></span> Aurora Atelier. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <!-- Cart Drawer (DIN bit) -->
+    <aside class="cart" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+      <div class="cart-panel" role="document">
+        <div class="cart-head">
+          <h2 id="cartTitle">Varukorg</h2>
+          <button class="icon-btn" id="closeCart" aria-label="Stäng varukorg">✖</button>
+        </div>
+        <div id="cartItems" class="cart-items" aria-live="polite"></div>
+        <div class="cart-foot">
+          <div class="cart-row">
+            <span>Delsumma</span>
+            <strong id="cartSubtotal">0 kr</strong>
+          </div>
+          <button class="btn btn-primary btn-full" id="checkoutBtn">Till kassan</button>
+          <p class="f-muted f-small">Kassan är en demo i denna mall.</p>
+        </div>
+      </div>
+      <div class="cart-backdrop" id="cartBackdrop" tabindex="-1" aria-hidden="true"></div>
+    </aside>
+
+    <div id="srLive" class="sr-only" aria-live="polite"></div>
+
+    <script>
+      // Små saker så sidan alltid funkar
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
