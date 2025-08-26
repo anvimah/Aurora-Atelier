@@ -16,7 +16,7 @@
       tones: ['silver', 'gold'],
       images: {
         silver: 'https://images.unsplash.com/photo-1520975922284-ec97aadb9e8f?q=80&w=1200&auto=format&fit=crop',
-        gold: 'https://images.unsplash.com/photo-1632167762359-46bc8ee143ea?q=80&w=1200&auto=format&fit=crop'
+        gold: 'https://designtorget.se/image/14231/dearguldhalsband1.jpg'
       },
       description: 'Minimalistiskt halsband med mjukt fasetterad medaljong.',
       material: 'Återvunnet 925 sterlingsilver / 18K guldplätering (2 µm)',
