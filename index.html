@@ -1,70 +1,206 @@
 <!DOCTYPE html>
-</form>
-<p class="f-muted f-small">Genom att anmäla dig godkänner du vår <a href="#">integritetspolicy</a>.</p>
-</section>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aurora Atelier — Exklusiva smycken</title>
 
+    <!-- Typsnitt (valfritt) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<footer class="site-footer" id="contact">
-<div class="f-cols">
-<div>
-<div class="f-logo">Aurora Atelier</div>
-<p class="f-muted">Stockholm • Est. 2025</p>
-<p class="f-small f-muted">Org.nr 556000-0000</p>
-</div>
-<div>
-<h3>Kundservice</h3>
-<ul>
-<li><a href="#">Frakt & returer</a></li>
-<li><a href="#">Storleksguide</a></li>
-<li><a href="#">Garanti</a></li>
-<li><a href="#">Köpvillkor</a></li>
-</ul>
-</div>
-<div>
-<h3>Kontakt</h3>
-<ul>
-<li><a href="mailto:hello@auroraatelier.se">hello@auroraatelier.se</a></li>
-<li><a href="#">Instagram</a> · <a href="#">Pinterest</a></li>
-<li>Vardagar 09–17</li>
-</ul>
-</div>
-</div>
-<div class="pay-row"><span class="f-muted">Säker betalning:</span><div class="pay-icons" aria-hidden="true">VISA · Mastercard · Klarna · Swish (demo)</div></div>
-<p class="f-copy">© <span id="year"></span> Aurora Atelier. Alla rättigheter förbehållna.</p>
-</footer>
+    <!-- Stilmall -->
+    <link rel="stylesheet" href="styles.css" />
 
+    <!-- App -->
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <!-- Announce bar -->
+    <div class="announce" role="region" aria-label="Kampanj">
+      Fri frakt över 600 kr • 30 dagar öppet köp • Handgjort i Norden
+    </div>
 
-<aside class="cart" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
-<div class="cart-panel" role="document">
-<div class="cart-head">
-<h2 id="cartTitle">Varukorg</h2>
-<button class="icon-btn" id="closeCart" aria-label="Stäng varukorg">✖</button>
-</div>
-<div class="cart-tools">
-<div class="tool">
-<label for="discountInput">Rabattkod</label>
-<div class="tool-row"><input id="discountInput" type="text" placeholder="Ange kod (t.ex. AURORA10)"/><button id="applyDiscount" class="btn">Använd</button></div>
-<p class="f-small f-muted">AURORA10 ger 10% rabatt (demo).</p>
-</div>
-<div class="tool">
-<label for="shippingSelect">Leverans</label>
-<div class="tool-row"><select id="shippingSelect"><option value="SE">Sverige – 49 kr (fri frakt över 600 kr)</option><option value="EU">EU – 99 kr</option><option value="World">Övriga världen – 149 kr</option></select></div>
-</div>
-</div>
-<div id="cartItems" class="cart-items" aria-live="polite"></div>
-<div class="cart-foot">
-<div class="cart-row"><span>Delsumma</span><strong id="cartSubtotal">0 kr</strong></div>
-<div class="cart-row"><span>Rabatt</span><strong id="cartDiscount">– 0 kr</strong></div>
-<div class="cart-row"><span>Frakt</span><strong id="cartShipping">0 kr</strong></div>
-<div class="cart-row total"><span>Totalt</span><strong id="cartTotal">0 kr</strong></div>
-<button class="btn btn-primary btn-full" id="checkoutBtn">Till kassan</button>
-<p class="f-muted f-small">Kassan är en demo. Ingen betalning genomförs.</p>
-</div>
-</div>
-<div class="cart-backdrop" id="cartBackdrop" tabindex="-1" aria-hidden="true"></div>
-</aside>
+    <!-- Header -->
+    <header class="site-header">
+      <a class="logo" href="#" aria-label="Aurora Atelier startsida">
+        <span class="logo-word">Aurora</span> <span class="logo-word thin">Atelier</span>
+      </a>
 
+      <nav class="nav" aria-label="Huvudmeny">
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#cat-halsband" class="nav-link">Halsband</a>
+        <a href="#cat-armband" class="nav-link">Armband</a>
+        <a href="#cat-ringar" class="nav-link">Ringar</a>
+        <a href="#about" class="nav-link">Om oss</a>
+        <a href="#contact" class="nav-link">Kontakt</a>
+      </nav>
 
-<div id="srLive" class="sr-only" aria-live="polite"></div>
-</body>
+      <div class="actions">
+        <button class="icon-btn" aria-label="Sök" id="openSearch" title="Sök">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5 1.5-1.5-5-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Varukorg" id="openCart" aria-haspopup="dialog" aria-controls="cartDrawer">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 14h9.69c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0021.34 5H6.21L5.27 3H2v2h2l3.6 7.59-1.35 2.44C5.52 16.37 6.48 18 8 18h12v-2H8l1.16-2z"/></svg>
+          <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Sökfält -->
+    <div class="searchbar" id="searchbar" hidden>
+      <input id="searchInput" type="search" placeholder="Sök smycken, t.ex. 'silverhalsband'" aria-label="Sök"/>
+      <select id="sortSelect" aria-label="Sortera">
+        <option value="featured">Rekommenderat</option>
+        <option value="priceAsc">Pris: lägst först</option>
+        <option value="priceDesc">Pris: högst först</option>
+        <option value="newest">Nyast</option>
+      </select>
+      <button id="closeSearch" class="icon-btn" aria-label="Stäng sök">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Hjältsektion">
+      <div class="hero-inner">
+        <h1>Skandinavisk minimalism i ädelt silver</h1>
+        <p>Exklusiva armband, halsband och ringar — handgjorda med omtanke.</p>
+        <a href="#shop" class="btn btn-primary">Utforska kollektionen</a>
+      </div>
+    </section>
+
+    <!-- Kategorier -->
+    <section class="categories" aria-labelledby="catTitle">
+      <h2 id="catTitle" class="section-title">Kategorier</h2>
+      <div class="cat-grid">
+        <a href="#cat-halsband" class="cat-card" data-filter="Halsband" id="cat-halsband">
+          <img src="https://images.unsplash.com/photo-1520975922284-ec97aadb9e8f?q=80&w=1200&auto=format&fit=crop" alt="Halsband i silver"/>
+          <span>Halsband</span>
+        </a>
+        <a href="#cat-armband" class="cat-card" data-filter="Armband" id="cat-armband">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Armband i silver"/>
+          <span>Armband</span>
+        </a>
+        <a href="#cat-ringar" class="cat-card" data-filter="Ringar" id="cat-ringar">
+          <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1200&auto=format&fit=crop" alt="Ringar i silver"/>
+          <span>Ringar</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="shop" aria-labelledby="shopTitle">
+      <div class="shop-header">
+        <h2 id="shopTitle" class="section-title">Kollektion</h2>
+        <div class="filters" role="toolbar" aria-label="Filter för produkter">
+          <button class="chip is-active" data-filter="Alla">Alla</button>
+          <button class="chip" data-filter="Halsband">Halsband</button>
+          <button class="chip" data-filter="Armband">Armband</button>
+          <button class="chip" data-filter="Ringar">Ringar</button>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- Om oss -->
+    <section id="about" class="story">
+      <div class="story-inner">
+        <h2>Tidlös design. Ärliga material.</h2>
+        <p>
+          Aurora Atelier förenar rena linjer med skulpturala former — inspirerat av nordiskt ljus och hav.
+          Vi använder återvunnet silver där det är möjligt, producerar i små upplagor och designar för att hålla.
+        </p>
+        <a href="#shop" class="btn">Se bästsäljare</a>
+      </div>
+    </section>
+
+    <!-- Nyhetsbrev -->
+    <section class="newsletter" aria-labelledby="nlTitle">
+      <h2 id="nlTitle" class="section-title">Få nyheter först</h2>
+      <form class="nl-form" id="newsletterForm">
+        <input type="email" placeholder="Din e-post" aria-label="E-post" required />
+        <button class="btn btn-primary" type="submit">Prenumerera</button>
+      </form>
+      <p class="f-muted f-small">Genom att anmäla dig godkänner du vår <a href="#">integritetspolicy</a>.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="contact">
+      <div class="f-cols">
+        <div>
+          <div class="f-logo">Aurora Atelier</div>
+          <p class="f-muted">Stockholm • Est. 2025</p>
+          <p class="f-small f-muted">Org.nr 556000-0000</p>
+        </div>
+        <div>
+          <h3>Kundservice</h3>
+          <ul>
+            <li><a href="#">Frakt & returer</a></li>
+            <li><a href="#">Storleksguide</a></li>
+            <li><a href="#">Garanti</a></li>
+            <li><a href="#">Köpvillkor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kontakt</h3>
+          <ul>
+            <li><a href="mailto:hello@auroraatelier.se">hello@auroraatelier.se</a></li>
+            <li><a href="#">Instagram</a> · <a href="#">Pinterest</a></li>
+            <li>Vardagar 09–17</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pay-row">
+        <span class="f-muted">Säker betalning:</span>
+        <div class="pay-icons" aria-hidden="true">VISA · Mastercard · Klarna · Swish (demo)</div>
+      </div>
+      <p class="f-copy">© <span id="year"></span> Aurora Atelier. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <!-- Varukorg -->
+    <aside class="cart" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+      <div class="cart-panel" role="document">
+        <div class="cart-head">
+          <h2 id="cartTitle">Varukorg</h2>
+          <button class="icon-btn" id="closeCart" aria-label="Stäng varukorg">✖</button>
+        </div>
+
+        <div class="cart-tools">
+          <div class="tool">
+            <label for="discountInput">Rabattkod</label>
+            <div class="tool-row">
+              <input id="discountInput" type="text" placeholder="Ange kod (t.ex. AURORA10)"/>
+              <button id="applyDiscount" class="btn">Använd</button>
+            </div>
+            <p class="f-small f-muted">AURORA10 ger 10% rabatt (demo).</p>
+          </div>
+          <div class="tool">
+            <label for="shippingSelect">Leverans</label>
+            <div class="tool-row">
+              <select id="shippingSelect">
+                <option value="SE">Sverige – 49 kr (fri frakt över 600 kr)</option>
+                <option value="EU">EU – 99 kr</option>
+                <option value="World">Övriga världen – 149 kr</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="cartItems" class="cart-items" aria-live="polite"></div>
+        <div class="cart-foot">
+          <div class="cart-row"><span>Delsumma</span><strong id="cartSubtotal">0 kr</strong></div>
+          <div class="cart-row"><span>Rabatt</span><strong id="cartDiscount">– 0 kr</strong></div>
+          <div class="cart-row"><span>Frakt</span><strong id="cartShipping">0 kr</strong></div>
+          <div class="cart-row total"><span>Totalt</span><strong id="cartTotal">0 kr</strong></div>
+          <button class="btn btn-primary btn-full" id="checkoutBtn">Till kassan</button>
+          <p class="f-muted f-small">Kassan är en demo. Ingen betalning genomförs.</p>
+        </div>
+      </div>
+      <div class="cart-backdrop" id="cartBackdrop" tabindex="-1" aria-hidden="true"></div>
+    </aside>
+
+    <div id="srLive" class="sr-only" aria-live="polite"></div>
+  </body>
 </html>
