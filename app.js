@@ -1,6 +1,4 @@
 /* Aurora Atelier — komplett butik: produkter, filter, sök, sortering, modaler, varukorg, rabatt & frakt */
-
-
 const sub = calcSubtotal();
 const disc = calcDiscount(sub);
 const ship = calcShipping(sub - disc);
@@ -10,7 +8,7 @@ $('#cartSubtotal').textContent = money(sub);
 $('#cartDiscount').textContent = disc ? `– ${money(disc)}` : '– 0 kr';
 $('#cartShipping').textContent = money(ship);
 $('#cartTotal').textContent = money(Math.max(0, sub - disc) + ship);
-
+}
 
 
 function persistCart(){ save('aa_cart', state.cart); save('aa_discount', state.discount); save('aa_ship', state.shippingZone); }
@@ -27,7 +25,7 @@ const first = f[0]; const last = f[f.length-1];
 function loop(e){ if(e.key!=='Tab') return; if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); } else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); } }
 modal.addEventListener('keydown', loop);
 $('#cartBackdrop').onclick = closeCart;
-}
+
 function announce(msg){ const sr = $('#srLive'); sr.textContent = ''; setTimeout(()=> sr.textContent = msg, 10); }
 
 
