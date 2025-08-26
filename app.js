@@ -65,7 +65,7 @@
       images: {
         silver: 'https://www.smycka.se/pub_images/original/A2156-051-14-1400x1400.jpg'
       },
-      description: 'Styvt cuff-armband med mjukt rundade ändar.',
+      description: 'Elegant och tidlöst silverarmband med mjuk länk och sten.',
       material: '925 sterlingsilver',
       dimensions: 'Bredd 5 mm, omkrets 16–18 cm (justerbar)',
       weight: '18 g',
